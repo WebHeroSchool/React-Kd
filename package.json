@@ -1,0 +1,22 @@
+{
+  "name": "react-kd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "hello": "echo 'hello'",
+    "createBuild": "mkdir build",
+    "deleteBuild": "rm -rf build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebHeroSchool/React-Kd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebHeroSchool/React-Kd/issues"
+  },
+  "homepage": "https://github.com/WebHeroSchool/React-Kd#readme"
+}
