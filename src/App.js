@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
+const text = 'How are you?'
 const number = 12345;
 let flag = true;
 
@@ -21,10 +22,10 @@ function App() {
           Learn React
         </a>
         <p style = {{color: 'red'}}>
-          Вывод значения переменной 'number': {number}
+          Вывод значения переменной 'text': {text}
         </p>
         <p style = {{color: 'red'}}>
-          Вывод числа: {54321}
+          Вывод числа с переменной 'number': {number}
         </p>
         <p style = {{color: 'red'}}>
           Вывод результата арифметической операции 'number' + 54321 = {number + 54321}
