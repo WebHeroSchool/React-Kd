@@ -1,5 +1,9 @@
 .wrap {
     margin: auto;
-    width: 300px;
+    width: 600px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.title {
+    color: #333;
 }
