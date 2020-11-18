@@ -20,7 +20,6 @@ class InputItem extends React.Component {
                 id: "standard-error",
                 label: "Введите дело!"
             })
-
         } else {
             this.setState({
                 id: "standard-basic",
@@ -33,19 +32,18 @@ class InputItem extends React.Component {
     render() {
         const { onClickAdd } = this.props;
 
-        return (<div className={styles.wrap}>
-            <TextField
-                error={this.state.error}
-                id={this.state.id}
-                label={this.state.label}
-                value={this.state.inputValue.toUpperCase()}
-                onChange={event => this.setState({inputValue: event.target.value})}
-                fullWidth
-            />
-            <button 
-            className={styles.btn} 
-            onClick={this.onButtonClick}>+</button>
-        </div>);
+        return (
+            <div className={styles.wrap}>
+                <TextField
+                    error={this.state.error}
+                    id={this.state.id}
+                    label={this.state.label}
+                    value={this.state.inputValue}
+                    onChange={event => this.setState({inputValue: event.target.value.toUpperCase()})}
+                    fullWidth
+                />
+                <button className={styles.btn} onClick={this.onButtonClick}>+</button>
+            </div>);
     }
 }
 
