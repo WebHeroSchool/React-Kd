@@ -11,4 +11,8 @@ const Footer = ({ count }) => (<div className={styles.wrap}>
         <button className={styles.btn}>Удалить выполненные</button>
 </div>);
 
+Footer.defaultProps = {
+    count: 0
+};
+
 export default Footer;
