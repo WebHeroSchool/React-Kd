@@ -5,7 +5,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-const Item = ({ value, isDone, id, onClickDone }) => (<div className={styles.flex}>
+const Item = ({ value, isDone, id, onClickDone, onClickDelete }) => (<div className={styles.flex}>
     <div>
         <Checkbox
             value="primary"
@@ -22,7 +22,7 @@ const Item = ({ value, isDone, id, onClickDone }) => (<div className={styles.fle
         </span>
     </div>
     <div>
-        <IconButton aria-label="delete">
+        <IconButton aria-label="delete" onClick={() => onClickDelete(id)}>
             <DeleteIcon />
         </IconButton>
     </div>
