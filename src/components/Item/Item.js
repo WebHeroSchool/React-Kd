@@ -28,4 +28,9 @@ const Item = ({ value, isDone, id, onClickDone, onClickDelete }) => (<div classN
     </div>
 </div>);
 
+Item.defaultProps = {
+    value: 'Дела отсутствуют',
+    isDone: false
+};
+
 export default Item;
