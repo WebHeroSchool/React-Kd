@@ -1,5 +1,5 @@
-import { StylesProvider } from '@material-ui/core';
 import React from 'react';
+import PropTypes from 'prop-types';
 import Item from '../Item/Item';
 import styles from './ItemList.module.css';
 
@@ -16,5 +16,9 @@ const ItemList = ({ items, onClickDone, onClickDelete}) => (
         />
       </li>)}
   </ul>);
+
+ItemList.propTypes = {
+  items: PropTypes.array.isRequired
+};
 
 export default ItemList;
