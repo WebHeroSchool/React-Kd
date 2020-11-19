@@ -45,6 +45,6 @@ class InputItem extends React.Component {
                 <button className={styles.btn} onClick={this.onButtonClick}>+</button>
             </div>);
     }
-}
+};
 
 export default InputItem;
