@@ -6,28 +6,48 @@ import Checkbox from '@material-ui/core/Checkbox';
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-const Item = ({ value, isDone, id, onClickDone, onClickDelete }) => (<div className={styles.flex}>
-    <div>
-        <Checkbox
-            value="primary"
-            inputProps={{ 'aria-label': 'primary checkbox' }}
-            onClick={() => onClickDone(id)}
-        />
-        <span className={
-            classnames({
-                [styles.item]: true,
-                [styles.done]: isDone
-            })
-        }>
-        {value}
-        </span>
-    </div>
-    <div>
-        <IconButton aria-label="delete" onClick={() => onClickDelete(id)}>
-            <DeleteIcon />
-        </IconButton>
-    </div>
-</div>);
+class Item extends React.Component {
+
+    componentDidMount() {
+        console.log('componentDidMount');
+    }
+
+    componentDidUpdate() {
+        console.log('componentDidUpdate');
+    }
+
+    componentWillUnmount() {
+        console.log('componentWillUnmount');
+    }
+
+    render() {
+        const { value, isDone, id, onClickDone, onClickDelete } = this.props;
+
+        return (
+            <div className={styles.flex}>
+                <div>
+                    <Checkbox
+                        value="primary"
+                        inputProps={{ 'aria-label': 'primary checkbox' }}
+                        onClick={() => onClickDone(id)}
+                    />
+                    <span className={
+                        classnames({
+                            [styles.item]: true,
+                            [styles.done]: isDone
+                        })
+                    }>
+                    {value}
+                    </span>
+                </div>
+                <div>
+                    <IconButton aria-label="delete" onClick={() => onClickDelete(id)}>
+                        <DeleteIcon />
+                    </IconButton>
+                </div>
+            </div>);
+    }
+};
 
 Item.defaultProps = {
     value: 'Дела отсутствуют'
